@@ -31,7 +31,7 @@ public class UserLogin {
                                      System.out.print("New password : ");
                                      scanner.next();
                                      String newPassword = scanner.nextLine();
-
+                                    scanner.close();
                                 if ((newPassword.equals(pass))) {
                                     System.out.println("Your new password cannot be the same as the old one");
                                     break;
