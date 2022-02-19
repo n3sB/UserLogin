@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class UserLogin {
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
         String name = "Enes";
         String pass = "1327";
@@ -14,37 +14,37 @@ public class UserLogin {
         System.out.print("Enter your password: ");
         password = scanner.nextLine();
 
-        if(userName.equals(name) && password.equals(pass)){
+        if (userName.equals(name) && password.equals(pass)) {
 
-                System.out.println("You are logged in");
-        }else{
-                System.out.println("Username or password is wrong");
-                    if(!password.equals("1327")){
+            System.out.println("You are logged in");
+        } else {
+            System.out.println("Username or password is wrong");
+            if (!password.equals("1327")) {
 
-                        System.out.println("Forgot my password? ");
-                        System.out.println("1-)Reset my password\n2-)Do not");
-                        int newSelect = scanner.nextInt();
+                System.out.println("Forgot my password? ");
+                System.out.println("1-)Reset my password\n2-)Do not");
+                int newSelect = scanner.nextInt();
 
+                switch (newSelect) {
+                    case 1:
+                        Scanner scanner2 = new Scanner(System.in);
 
-                        switch (newSelect) {
-                            case 1:
-                                     System.out.print("New password : ");
-                                     scanner.next();
-                                     String newPassword = scanner.nextLine();
-                                    scanner.close();
-                                if ((newPassword.equals(pass))) {
-                                    System.out.println("Your new password cannot be the same as the old one");
-                                    break;
-                                }else {
-                                    System.out.println("Your password has been created");
-                                }
-                                    break;
+                        System.out.print("New password : ");
+                        String newPassword = scanner2.nextLine();
 
-                            case 2:
-                                    System.out.println("Have a nice day :)");
-                                    break;
+                        if ((newPassword.equals(pass))) {
+                            System.out.println("Your new password cannot be the same as the old one");
+                            break;
+                        } else {
+                            System.out.println("Your password has been created");
+                        }
+                        break;
+
+                    case 2:
+                        System.out.println("Have a nice day :)");
+                        break;
+                }
             }
-                     }
 
         }
     }
