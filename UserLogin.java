@@ -47,5 +47,6 @@ public class UserLogin {
             }
 
         }
+        scanner.close();
     }
 }
