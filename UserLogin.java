@@ -7,7 +7,7 @@ public class UserLogin {
 
         Scanner scanner = new Scanner(System.in);
         String name = "Enes";
-        String pass = "1327";
+        String pass = "1234";
         String userName, password;
 
         System.out.print("Enter your username: ");
